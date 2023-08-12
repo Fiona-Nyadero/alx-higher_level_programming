@@ -13,10 +13,10 @@ if __name__ == "__main__":
     else:
         print(ac, "arguments:")
         
-    if y >=1:
-        y = 0
+    if ac >= 1:
+        ac = 0
         for arg in sys.argv:
-            if y != 0:
-                print("{}: {}".format(y, arg)
-            y += 1
+            if ac != 0:
+                print("{}: {}".format(ac, arg))
+            ac += 1
 
