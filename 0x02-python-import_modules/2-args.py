@@ -12,5 +12,11 @@ if __name__ == "__main__":
         print("1:", av[0])
     else:
         print(ac, "arguments:")
-        for y, arg in enumerate(av, start=1):
-            print(y, ":", arg)
+        
+    if y >=1:
+        y = 0
+        for arg in sys.argv:
+            if y > 0:
+                print("{}: {}".format(y, arg)
+            y += 1
+
