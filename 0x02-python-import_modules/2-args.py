@@ -16,7 +16,7 @@ if __name__ == "__main__":
     if y >=1:
         y = 0
         for arg in sys.argv:
-            if y > 0:
+            if y != 0:
                 print("{}: {}".format(y, arg)
             y += 1
 
