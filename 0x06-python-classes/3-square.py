@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Square class definition"""
+
+
 class Square:
     """This class reps a square shape."""
 
@@ -8,7 +10,7 @@ class Square:
 
         Args:
             size (int): The size of the square. Defaults to 0.
-        
+
         Raises:
             TypeError: If size != integer.
             ValueError: If size < 0.
