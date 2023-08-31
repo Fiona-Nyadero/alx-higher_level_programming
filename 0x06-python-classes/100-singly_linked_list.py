@@ -90,4 +90,4 @@ class SinglyLinkedList:
         while bucket is not None:
             res += str(bucket.data) + "\n"
             bucket = bucket.next_node
-        return res
+        return res.rstrip("\n")
