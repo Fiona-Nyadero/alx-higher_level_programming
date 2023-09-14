@@ -5,10 +5,10 @@
 class MyInt(int):
     """This class reps MyInt"""
 
-    def __rev_eq__(self, value):
+    def __eq__(self, value):
         """rebel swap '==' operator with '!=' """
         return self.real != value
 
-    def __rev_ne__(self, value):
+    def __ne__(self, value):
         """rebel swap '!=' operator with '==' """
         return self.real == value
