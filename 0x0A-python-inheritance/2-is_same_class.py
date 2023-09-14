@@ -10,4 +10,9 @@ def is_same_class(obj, a_class):
     Returns:
         Boolean
     """
-    return isinstance(obj, a_class)
+    if a_class is object and obj is None:
+        return True
+    elif a_class is list and isinstance(obj, list):
+        return True
+    else:
+        return isinstance(obj, a_class)
