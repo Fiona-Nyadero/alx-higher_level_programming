@@ -65,3 +65,17 @@ class Rectangle:
             return 0
 
         return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """Returns an infrmal str rep"""
+
+        if self.__height == 0 or self.__width == 0:
+            return ''
+
+        printed_str = ''
+
+        for t in range(self.__height):
+            for s in range(self.__width):
+                printed_str += '#'
+            printed_str += '\n'
+        return printed_str[:-1]
