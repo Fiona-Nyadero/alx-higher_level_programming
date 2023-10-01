@@ -4,10 +4,10 @@
 
 class Rectangle:
     """This class reps a Rectamgle shape"""
-    
+
     def __init__(self, width=0, height=0):
         """Inits a Rectangle instance"""
-        
+
         self.width = width
         self.height = height
 

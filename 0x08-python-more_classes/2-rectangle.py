@@ -4,10 +4,10 @@
 
 class Rectangle:
     """This class reps a Rectamgle shape"""
-    
+
     def __init__(self, width=0, height=0):
         """Inits a Rectangle instance"""
-        
+
         self.width = width
         self.height = height
 
@@ -52,7 +52,7 @@ class Rectangle:
         Returns:
             Height * Width
         """
-        
+
         return self.__width * self.__height
 
     def perimeter(self):
@@ -62,10 +62,6 @@ class Rectangle:
         """
 
         if self.__width > 0 or self.__height > 0:
-        
-            a = 2 * self.__width
-            b = 2 * self.__height
+            return 0
 
-            return a + b
-
-        return 0
+        return 2 * (self.__width + self.__height)
