@@ -13,7 +13,7 @@ if __name__ == "__main__":
     import sys
 
     sz = 0
-    stats_codes = {}
+    status_codes = {}
     validated_cds = {'200', '301', '400', '401', '403', '404', '405', '500'}
     tally = 0
 
@@ -27,14 +27,14 @@ if __name__ == "__main__":
                 sz += int(elements[-1])
 
                 if code in validated_cds:
-                    stats_codes[code] = stats_codes.get(code, 0) + 1
+                    status_codes[code] = status_codes.get(code, 0) + 1
             except (ValueError, IndexError):
                 pass
 
             if tally == 10:
-                print_stats(sz, stats_codes)
+                print_stats(sz, status_codes)
                 tally = 0
 
     except KeyboardInterrupt:
-        print_stats(sz, stats_codes)
+        print_stats(sz, status_codes)
         raise
