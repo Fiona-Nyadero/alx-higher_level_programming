@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" A PyScript that lists all states starting with 'N' from hbtn_0e_0_usa db """
+"""
+A Python Script that lists all states
+starting with 'N' from hbtn_0e_0_usa db
+"""
 
 import MySQLdb
 import sys

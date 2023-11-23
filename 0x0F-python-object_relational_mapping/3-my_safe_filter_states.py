@@ -11,7 +11,8 @@ if __name__ == "__main__":
     """Filter query code for the database SQLinjection-proof"""
 
     if len(sys.argv) != 5:
-        print("Usage: {} <username> <password> <database> <state_name>".format(sys.argv[0]))
+        print("Usage: {} <username> <password> <database> \
+               <state_name>".format(sys.argv[0]))
         sys.exit(1)
 
     username, password, database, state_name = sys.argv[1:]
@@ -21,7 +22,8 @@ if __name__ == "__main__":
                              passwd=sys.argv[2], db=sys.argv[3], port=3306)
 
         crs = db.cursor()
-        crs.execute("SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC", (state_name, ))
+        crs.execute("SELECT * FROM states WHERE name LIKE \
+                     %s ORDER BY id ASC", (state_name, ))
 
         itemrows = crs.fetchall()
         for item in itemrows:
