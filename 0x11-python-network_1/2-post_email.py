@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Takes a URL and an email, sends a POST HTTP request,
-& displays the response body
+Takes a URL and an email, sends a POST
+HTTP request & displays the response body
 """
 import urllib.request
 import urllib.parse
