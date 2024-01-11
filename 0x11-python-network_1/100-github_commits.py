@@ -10,14 +10,16 @@ if __name__ == "__main__":
     repository_name = sys.argv[1]
     owner_name = sys.argv[2]
 
-    url = f"https://api.github.com/repos/
-            {owner_name}/{repository_name}/commits"
+    url = (
+            f"https://api.github.com/repos/{owner_name}/"
+            f"{repository_name}/commits"
+    )
 
     try:
-        response = requests.get(url)
-        response.raise_for_status()
+        rspnse = requests.get(url)
+        rspnse.raise_for_status()
 
-        commits = response.json()[:10]  # Get the 10 most recent commits
+        commits = rspnse.json()[:10]
 
         for commit in commits:
             sha = commit['sha']
