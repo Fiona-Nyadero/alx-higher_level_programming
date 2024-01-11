@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Takes a URL and an email, sends a POST request, and displays the body of the response
+Takes a URL and an email, sends a POST HTTP request,
+& displays the response body
 """
 import urllib.request
 import urllib.parse
@@ -15,5 +16,5 @@ if __name__ == "__main__":
     data = data.encode('utf-8')
 
     with urllib.request.urlopen(url, data) as response:
-        content = response.read().decode('utf-8') 
+        content = response.read().decode('utf-8')
         print(content)
