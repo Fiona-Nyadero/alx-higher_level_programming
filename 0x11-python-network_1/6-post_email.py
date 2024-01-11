@@ -18,7 +18,7 @@ if __name__ == "__main__":
         rspnse = requests.post(url, data=data)
         rspnse.raise_for_status()
 
-        print("Your email is:", rspnse.text)
+        print(rspnse.text)
 
     except requests.exceptions.RequestException as e:
         print("Error:", e)
